@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title></title>
+<title>3-5</title>
 <link href="../../_common/images/favicon.ico" rel="shortcut icon">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
 <link href="../../_common/css/style.css" rel="stylesheet">
@@ -11,13 +11,14 @@
 <body>
 <header>
 <div class="container">
-<h1></h1>
-<h2></h2>
+<h1>時間で異なるメッセージを表示する</h1>
+<h2>二つ以上の条件式で一つの条件を作る</h2>
 </div><!-- /.container -->
 </header>
 <main>
 <div class="container">
 <section>
+
 </section>
 </div><!-- /.container -->
 </main>
@@ -27,6 +28,17 @@
 </div><!-- /.container -->
 </footer>
 <script>
+  'use strict';
+
+  const hour = new Date().getHours();
+
+  if(hour >= 19 && hour <= 21) {
+    window.alert('お弁当30%OFF')
+  } else if(hour === 9 || hour === 15) {
+    window.alert('一個買ったら一個無料');
+  } else {
+    window.alert('お弁当いかが?');
+  }
 </script>
 </body>
 </html>

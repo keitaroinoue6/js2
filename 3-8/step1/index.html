@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title></title>
+<title>3-8</title>
 <link href="../../_common/images/favicon.ico" rel="shortcut icon">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
 <link href="../../_common/css/style.css" rel="stylesheet">
@@ -11,13 +11,14 @@
 <body>
 <header>
 <div class="container">
-<h1></h1>
-<h2></h2>
+<h1>税込価格を計算する</h1>
+<h2>HTMLに出力する</h2>
 </div><!-- /.container -->
 </header>
 <main>
 <div class="container">
 <section>
+
 </section>
 </div><!-- /.container -->
 </main>
@@ -27,6 +28,14 @@
 </div><!-- /.container -->
 </footer>
 <script>
+  'use strict';
+
+  function total(price) {
+    const tax = 0.1;
+    return price + price * tax;
+  }
+
+  console.log('コーヒメーカーの値段は' + total(8000) + '税込です');
 </script>
 </body>
 </html>

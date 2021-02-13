@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>3-8</title>
+<title>3-9</title>
 <link href="../../_common/images/favicon.ico" rel="shortcut icon">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
 <link href="../../_common/css/style.css" rel="stylesheet">
@@ -11,14 +11,13 @@
 <body>
 <header>
 <div class="container">
-<h1>税込価格を計算する</h1>
-<h2>HTMLに出力する</h2>
+<h1>fizzbuzz</h1>
+<h2>30までの数で</h2>
 </div><!-- /.container -->
 </header>
 <main>
 <div class="container">
 <section>
-  <p id="output"></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -30,13 +29,25 @@
 <script>
   'use strict';
 
-  function total(price) {
-    const tax = 0.1;
-    return price + price * tax;
+  function fizzbuzz(num) {
+    if(num % 3 === 0 &&  num % 5 ===0 ) {
+      return 'fizzbuzz';
+    } else if (num % 3 === 0) {
+      return 'fizz';
+    } else if (num % 5 === 0) {
+      return 'buzz';
+    } else {
+      return num;
+    }
   }
 
-  console.log('コーヒメーカーの値段は' + total(8000) + '税込です');
-  document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '税込です';
+  console.log(fizzbuzz(3));
+
+  let i = 1;
+  while(i <= 30) {
+    console.log(fizzbuzz(1));
+    i += 1;
+  }
 </script>
 </body>
 </html>

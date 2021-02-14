@@ -11,13 +11,20 @@
 <body>
 <header>
 <div class="container">
-<h1></h1>
-<h2></h2>
+<h1>アイテムの価格を表示する</h1>
+<h2>オブジェクト</h2>
 </div><!-- /.container -->
 </header>
 <main>
 <div class="container">
 <section>
+  <table>
+    <tr>
+      <td id="title"></td>
+      <td id="price"></td>
+      <td id="stock"></td>
+    </tr>
+  </table>
 </section>
 </div><!-- /.container -->
 </main>
@@ -30,7 +37,17 @@
   'use strict';
 
   let jsbook = {title: 'Javascript入門', price: 2500, stock: 3};
-  console.log(jsbook.title);
+  // console.log(jsbook['price']);
+  // console.log(jsbook.title);
+  // jsbook.stock = 10;
+  // console.log(jsbook.stock);
+  // for(let hoge in jsbook) {
+  //   console.log(hoge + '=' + jsbook[hoge]);
+  // }
+  document.getElementById('title').textContent = jsbook.title;
+  document.getElementById('price').textContent = jsbook.price + '円';
+  document.getElementById('stock').textContent = jsbook.stock;
+
 </script>
 </body>
 </html>
